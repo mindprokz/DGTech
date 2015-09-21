@@ -6,7 +6,13 @@ $(document).ready(function() {
 		yaCounterXXXXXXXX.reachGoal("goal");
 		return true;
 	}));
-	new WOW().init();
+	new WOW().init({
+		boxClass:     'wow',      // default
+		animateClass: 'animated', // default
+		offset:       150,          // default
+		mobile:       true,       // default
+		live:         true        // default
+	});
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {

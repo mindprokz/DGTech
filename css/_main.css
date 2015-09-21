@@ -17,6 +17,8 @@
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
+    outline: 0;
+    border:0;
 }
 body input:required:valid,
 body textarea:required:valid {
@@ -57,12 +59,18 @@ body{
 .light{
     font-weight: 300;
 }
+.hid{
+    visibility: hidden;
+}
 /*=========================
         end reset
 =========================*/
 .content{
     width: 1000px;
     padding: 0 30px;
+    text-align: center;
+    margin: auto;
+    position: relative;
 }
 #header{
     position: relative;
@@ -109,6 +117,63 @@ body{
 img[alt="scroll"]{
     margin-top: 10px;
     padding-top: 35px;
+}
+#quality{
+    padding: 60px 0;
+}
+#quality img{
+    margin-right: 55px;
+}
+#quality img:last-child{
+    margin-right: 0;
+}
+#form_y{
+    background: #ffde00;
+    position: relative;
+}
+img[alt="secr"]{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#application{
+    width: 300px;
+    margin-left: 50px;
+}
+#application h3{
+    color: #005cb2;
+}
+.first_h3{
+    font-size: 25pt;
+    padding-top: 5px;
+}
+.second_h3{
+    font-size: 37pt;
+    margin-bottom: 20px;
+}
+#application h6{
+    text-align: left;
+    font-size: 13pt;
+    font-weight: 300;
+    color: #005cb2;
+    margin-top: 5px;
+}
+#application input{
+    color: #005cb2;
+    width: 100%;
+    border: #005cb0 solid 3px;
+    background: #ffde00;
+    height: 30px;
+    padding-left: 10px;
+}
+.applicationButton{
+    background: #005cb2;
+    text-transform: uppercase;
+    color: #ffde00;
+    border:0;
+    font-size: 18pt;
+    margin: 15px 0;
+    padding: 5px 15px;
 }
 
 

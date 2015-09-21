@@ -36,11 +36,36 @@
 	<div id="header">
 		<img src="img/video-bg.jpg" alt="background" id="main__video">
 		<div id="top__content">
-			<img src="img/logo.png" alt="logotype">
-			<h3 class="bold main_header_1">Прямые поставки пестицидов</h3>
-			<h3 class="light main_header_2" >от производителя по Казахстану</h3>
-			<a href="#" class="button">Посмотреть видео</a>
-			<img src="img/scroll.png" alt="scroll">
+			<img src="img/logo.png" class=" hid wow bounceInDown" alt="logotype">
+			<h3 class="bold main_header_1  hid wow slideInLeft">Прямые поставки пестицидов</h3>
+			<h3 class="light main_header_2  hid wow slideInRight" >от производителя по Казахстану</h3>
+			<a href="#" class="button  hid wow zoomIn">Посмотреть видео</a>
+			<img src="img/scroll.png" alt="scroll" class=" hid wow zoomInUp">
+		</div>
+	</div>
+	<div id="quality">
+		<div class="content">
+			<img src="img/qua_5.png" alt="quality" class="hid wow zoomIn">
+			<img src="img/qua_4.png" alt="quality" class="hid wow zoomIn"data-wow-delay="0.25s">
+			<img src="img/qua_3.png" alt="quality" class="hid wow zoomIn"data-wow-delay="0.5s">
+			<img src="img/qua_2.png" alt="quality" class="hid wow zoomIn"data-wow-delay="0.25s">
+			<img src="img/qua_1.png" alt="quality" class="hid wow zoomIn">
+		</div>
+	</div>
+	<div id="form_y">
+		<div class="content">
+			<form id="application" action="mail.php" method="POST" name="application">
+				<h3 class="light first_h3 hid wow fadeIn" data-wow-duration="2s" >Получить бесплатную</h3>
+				<h3 class="bold second_h3 hid wow fadeIn" data-wow-duration="2s">консультацию</h3>
+				<h6>Ваше имя</h6>
+				<input name="name" id="applicationName" maxlength="30" required class="hid wow fadeInLeft" />
+				<h6>Ваш телефон</h6>
+				<input name="email" type="email" id="applicationEmail" maxlength="40" required class="hid wow fadeInLeft"data-wow-delay="0.25s"/>
+				<h6>Ваш e-mail</h6>
+				<input name="telephone" type="Tel" id="applicationTelephone" maxlength="40" required class="hid wow fadeInLeft" data-wow-delay="0.5s"/>
+				<button class="applicationButton" type="submit" form="application"> Отправить </button>
+			</form>
+			<img src="img/secr.png" alt="secr">
 		</div>
 	</div>
 <!--     Пример формы обратной связи          -->
