@@ -7,10 +7,10 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	livereload = require('gulp-livereload');
 
-// task for change html
-gulp.task('html',function(){
-	gulp.src('index.html');
-});
+// // task for change html
+// gulp.task('html',function(){
+// 	gulp.src('index.html');
+// });
 
 // task for css
 gulp.task('css', function () {
@@ -31,9 +31,8 @@ gulp.task('js', function() {
 // taks for watch change files
 gulp.task('watch', function(){
 	gulp.watch('css/*.css', ['css']);
-	gulp.watch('index.html', ['html']);
 	gulp.watch('js/*.js', ['js']);
 });
 
 // default task
-gulp.task('default', ['html','css','js','watch']);
+gulp.task('default', ['css','js','watch']);
