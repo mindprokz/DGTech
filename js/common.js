@@ -9,7 +9,7 @@ $(document).ready(function() {
 	new WOW().init({
 		boxClass:     'wow',      // default
 		animateClass: 'animated', // default
-		offset:       150,          // default
+		offset:       200,          // default
 		mobile:       true,       // default
 		live:         true        // default
 	});

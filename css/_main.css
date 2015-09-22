@@ -174,6 +174,92 @@ img[alt="secr"]{
     font-size: 18pt;
     margin: 15px 0;
     padding: 5px 15px;
+    transition: color .3s ease;
+}
+.applicationButton:hover{
+    color: #fff;
+}
+#profit{
+    background: url(../../img/vigodi-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 35px;
+}
+#profit h3{
+    color: #fff;
+    font-size: 40pt;
+    padding-top: 25px;
+    text-transform: uppercase;
+    padding-bottom: 35px;
+}
+img[alt="profit"]{
+    margin: 5px;
+}
+#work{
+    background: url(../../img/work_bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 35px;
+}
+#work h3{
+    color: #2a2a2a;
+    font-size: 40pt;
+    text-transform: uppercase;
+    padding: 25px 0 35px 0;
+}
+.first_p{
+    width: 50%;
+    float: left;
+    text-align: left;
+    font-weight: 300;
+    font-size: 13pt;
+}
+.second_p{
+    width: 50%;
+    float: right;
+    text-align: right;
+    font-weight: 300;
+    font-size: 13pt;
+    margin-bottom: 60px;
+}
+#left_half{   
+    width: 55%;
+    float: left;;
+}
+#left_half header{
+    background: #005cb2;
+    text-align: center;
+    font-size: 19pt;
+    color: #fff;
+    padding: 20px 10px;
+}
+.row_table{
+    width: 100%;
+}
+.col_table{
+    width: 50%;
+    background: #fff;
+    float: le
+}
+#app_1 #left_half table{
+    width: 100%;
+}
+#app_1 #left_half tr:nth-child(2n){
+    background: #f1f1f1;
+}
+#app_1 #left_half tr:nth-child(2n+1){
+    background: #fff;
+}
+#app_1 #left_half tr td{
+    width: 50%;
+    vertical-align: center;
+    font-weight: 300;
+    color: #005cb2;
+    height: 45px;
+    text-align: left;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+    font-size: 13pt;
 }
 
 
