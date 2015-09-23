@@ -134,35 +134,54 @@
 						</header>
 						<table>
 							<tr>
-								<td> <img src="img/logos_7.png" alt=""></td>
-								<td> <img src="img/logos_1.png" alt=""></td>
+								<td><a href="frames/1.html" class="various" data-fancybox-type="iframe"> <img src="img/logos_7.png" alt=""></a></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_1.png" alt=""></a></td>
 							</tr>
 							<tr>
-								<td> <img src="img/logos_8.png" alt=""></td>
-								<td> <img src="img/logos_2.png" alt=""></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_8.png" alt=""></a></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_2.png" alt=""></a></td>
 							</tr>
 							<tr>
-								<td> <img src="img/logos_9.png" alt=""></td>
-								<td> <img src="img/logos_3.png" alt=""></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_9.png" alt=""></a></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_3.png" alt=""></a></td>
 							</tr>
 							<tr>
-								<td> <img src="img/logos_10.png" alt=""></td>
-								<td> <img src="img/logos_4.png" alt=""></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_10.png" alt=""</a>></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_4.png" alt=""></a></td>
 							</tr>
 							<tr>
-								<td> <img src="img/logos_11.png" alt=""></td>
-								<td> <img src="img/logos_5.png" alt=""></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_11.png" alt=""</a>></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_5.png" alt=""></a></td>
 							</tr>
 							<tr>
-								<td> <img src="img/logos_12.png" alt=""></td>
-								<td> <img src="img/logos_6.png" alt=""></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_12.png" alt=""></a></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_6.png" alt=""></a></td>
 							</tr>
 							<tr>
-								<td> <img src="img/logos_13.png" alt=""></td>
+								<td><a href="frames/" class="various" data-fancybox-type="iframe"> <img src="img/logos_13.png" alt=""></a></td>
 								<td></td>
 							</tr>
 						</table>
 					</div>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="content">
+			<h3 class="light"><span class="bold">Отзывы</span> наших клиентов</h3>
+			<div class="comment">
+				<div class="yellow clear">
+					<img src="img/comment/comment_1.png" alt="comment">
+					<p>Разнообразный и богатый опыт консультация с широким активом требуют от нас анализа новых предложений. Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.</p>
+				</div>
+				<div class="bottom_comment">Евгений Жуков, фермер</div>
+			</div>
+			<div class="comment">
+				<div class="blue clear">
+					<img src="img/comment/comment_2.png" alt="comment">
+					<p>Разнообразный и богатый опыт консультация с широким активом требуют от нас анализа новых предложений. Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.</p>
+				</div>
+				<div class="bottom_comment2">Гай Уотсон, предприниматель</div>
 			</div>
 		</div>
 	</div>
@@ -190,16 +209,22 @@
 
 	<!-- Load CSS (remove/comment after release) -->
 	<script>
-	//Load Libs CSS
-	var ms=document.createElement("link");
-	ms.rel="stylesheet";
-	ms.href="libs/animate/animate.css";
-	document.getElementsByTagName("head")[0].appendChild(ms);
-
 	//Header Styles (compress & paste to header after release)
 	var ms=document.createElement("link");
 	ms.rel="stylesheet";
 	ms.href="min/css/main.min.css";
+	document.getElementsByTagName("head")[0].appendChild(ms);
+
+	//Fancy box css
+	var ms=document.createElement("link");
+	ms.rel="stylesheet";
+	ms.href="libs/fancybox/source/jquery.fancybox.css";
+	document.getElementsByTagName("head")[0].appendChild(ms);
+
+	//Load Libs CSS
+	var ms=document.createElement("link");
+	ms.rel="stylesheet";
+	ms.href="libs/animate/animate.css";
 	document.getElementsByTagName("head")[0].appendChild(ms);
 </script>
 
@@ -209,6 +234,7 @@
 	{"src" : "libs/jquery/jquery-1.11.2.min.js", "async" : false},
 	{"src" : "libs/animate/animate-css.js", "async" : false},
 	{"src" : "libs/Wow/wow.min.js", "async" : false},
+	{"src" : "libs/fancybox/source/jquery.fancybox.pack.js", "async" : false},
 	{"src" : "min/js/common.js", "async" : false}
 	]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 </script>

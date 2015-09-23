@@ -340,3 +340,66 @@ img[alt="profit"]{
 #app_1 #right_half tr:nth-child(2n+1){
     background: #fff;
 }
+#comment{
+background: url(../../img/upfeathers.jpg);
+    background-attachment: fixed;    
+}
+#comment h3{
+    font-size: 40pt;
+    padding: 25px 0 35px 0;
+    text-transform: uppercase;
+}
+.comment{
+    padding-bottom: 30px;
+}
+.yellow{
+    background: #ffde00;
+    border-radius: 10px 10px 10px 0;
+    margin-left: 145px;
+}
+.yellow img[alt="comment"]{
+    float: left;
+    margin-left: -145px;
+}
+.yellow p{
+    text-align: left;
+    padding: 30px 30px 35px 60px;
+    line-height: 17pt;
+    font-size: 12pt;
+    font-weight: 300;
+}
+.bottom_comment{
+    background: url(../../img/comment_yellow.png) no-repeat;
+    margin-left: 145px;
+    text-align: left;
+    padding-left: 60px;
+    color: #005cb2;
+    padding-bottom: 15px;
+    font-size: 14pt;
+}
+.blue{
+    background: #005cb2;
+    border-radius: 10px 10px 0 10px;
+    margin-right: 145px;
+}
+.blue img[alt="comment"]{
+    float: right;
+    margin-right: -145px;   
+}
+.blue p{
+    text-align: right;
+    padding: 30px 60px 35px 30px;
+    line-height: 17pt;
+    font-size: 12pt;
+    color: #fff;
+    font-weight: 300;
+}
+.bottom_comment2{
+    background: url(../../img/comment_blue.png) no-repeat top right;
+    margin-right: 145px;
+    text-align: right;
+    padding-right: 60px;
+    color: #ffde00;
+    padding-bottom: 15px;
+    font-size: 14pt;
+}
