@@ -198,7 +198,6 @@ img[alt="profit"]{
 #work{
     background: url(../../img/work_bg.jpg);
     background-size: cover;
-    background-attachment: fixed;
     padding-bottom: 140px;
 }
 #work h3{
@@ -377,6 +376,9 @@ background: url(../../img/upfeathers.jpg);
     padding-bottom: 15px;
     font-size: 14pt;
 }
+.bottom_comment[data-per="1"]{
+    padding-left: 20px;
+}
 .blue{
     background: #005cb2;
     border-radius: 10px 10px 0 10px;
@@ -402,4 +404,80 @@ background: url(../../img/upfeathers.jpg);
     color: #ffde00;
     padding-bottom: 15px;
     font-size: 14pt;
+}
+#ques h3{
+    font-size: 30pt;
+    padding: 25px 0;
+}
+#ques h3 a{
+    color:#29c0e1;
+    border-bottom: 2px dotted #29c0e1;
+    transition: all .3s;
+    font-weight: 300;
+}
+#ques h3 a:hover{
+    color:#33aac3;
+    border-bottom: 2px dotted #33aac3;   
+}
+#map{
+    background: #ffde00;
+}
+#maps_body{
+    width: 60%;
+    float: left;
+    padding: 50px 0;
+}
+#maps_body header{
+    text-align: left;
+    margin-bottom: 30px;
+}
+#maps_body header span{
+    font-family: Arial, sans-serif;
+    font-size: 20pt;
+}
+#maps_body header select{
+    width: 265px;
+    height: 30px;
+    vertical-align: top;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Roboto',sans-serif;
+    padding-left: 10px;
+    margin-left: 50px;
+}
+.map_element{
+    fill:#2064af;
+    stroke:#fff;
+    stroke-opacity:0.4;
+    transition: fill .3s ease;
+}
+svg .active_elem{
+    fill:#fff;
+}
+option:hover{
+    background: #000;
+}
+.map_element:hover{
+    cursor: pointer;
+    fill: #3284de;
+}
+#contact_body{
+    height: 466px;
+    background: #005cb2;
+    float: right;
+    width: 40%;
+    color: #fff;
+    text-align: left;
+    padding: 50px 35px 35px 35px;
+}
+footer .content{
+    padding: 40px;
+    margin-bottom: 15px;
+}
+footer span{
+    float: left;
+}
+footer img{
+    float: right;
+    margin-right: 15px;
 }
