@@ -470,6 +470,14 @@ option:hover{
     text-align: left;
     padding: 50px 35px 35px 35px;
 }
+#contact_body h3{
+    padding-top: 40px;
+    font-size: 15pt;
+}
+#contact_body h4{
+    padding-top: 10px;
+    font-size: 11pt;
+}
 footer .content{
     padding: 40px;
     margin-bottom: 15px;
@@ -480,4 +488,8 @@ footer span{
 footer img{
     float: right;
     margin-right: 15px;
+}
+.no_active_map{
+    fill:#2d86e7;
+    opacity: 0.5;
 }
