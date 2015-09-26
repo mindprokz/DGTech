@@ -23,7 +23,11 @@ body textarea:focus:required:invalid {
 body input:required:valid,
 body textarea:required:valid {
 }
-
+@keyframes opacityAnim{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
 /*=====================
         reset
 =====================*/
@@ -114,7 +118,7 @@ body{
     background: #005cb2;
     color: #ffde00;
 }
-img[alt="scroll"]{
+.scroll{
     margin-top: 10px;
     padding-top: 35px;
 }
@@ -492,4 +496,16 @@ footer img{
 .no_active_map{
     fill:#2d86e7;
     opacity: 0.3;
+}
+.width_stroke{
+    stroke-width: 1.4px;
+}
+.animstroke1{
+    animation: opacityAnim 2s infinite;
+}
+.animstroke2{
+    animation: opacityAnim 2s infinite 0.25s;
+}
+.animstroke3{
+    animation: opacityAnim 2s infinite 0.5s;
 }

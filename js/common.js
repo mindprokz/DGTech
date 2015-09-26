@@ -13,7 +13,7 @@ $(document).ready(function() {
 		boxClass:     'wow',      // default
 		animateClass: 'animated', // default
 		offset:       200,          // default
-		mobile:       true,       // default
+		mobile:       false,       // default
 		live:         true        // default
 	});
 	// Fancybox add
@@ -106,8 +106,8 @@ maps_obj.change_adress_arr = [
 	'adress'
 ];
 maps_obj.changePositionOnMaps = function(i){
-	document.querySelector('.active_elem').setAttribute('class','map_element');
-	maps_obj.element_onMap[i].setAttribute('class','map_element active_elem');
+	document.querySelector('.active_elem').classList.remove('active_elem');
+	maps_obj.element_onMap[i].classList.add('active_elem');
 };
 
 maps_obj.selector.onchange = function(){
