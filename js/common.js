@@ -36,22 +36,39 @@ $(document).ready(function() {
 		});
 	};
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+	$(window).scroll(function(){
+		var st = $(this).scrollTop();
 
-	$('div[data-type="background"]').each(function(){
-        var $bgobj = $(this); // создаем объект
-        $(window).scroll(function() {
-            var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
-            // Присваиваем значение background-position
-            var coords = 'center '+ yPos + 'px';
-            // Создаем эффект Parallax Scrolling
-            $bgobj.css({ backgroundPosition: coords });
-        });
+		$('#top__content').css({
+			"transform" : "translate(-50%,-" + (50 + st/4) + "%)",
+			"-webkit-transform" : "translate(-50%,-" + (50 + st/3) + "%)",
+		});
+	});
+	// $('div[data-type="background"]').each(function(){
+ //        var $bgobj = $(this); // создаем объект
+ //        $(window).scroll(function() {
+ //            var yPos = -($(window).scrollTop() / 6); // вычисляем коэффициент 
+ //            // Присваиваем значение background-position
+ //            var coords = 'center '+ (-yPos + 'px');
+ //            // Создаем эффект Parallax Scrolling
+ //            $bgobj.css({ backgroundPosition: coords });
+ //        });
+ //    });
+    $(window).scroll(function(){
+		 var st = $(this).scrollTop();
+		$('#top__content').css({
+			"transform" : "translate(0%," + (60 - st/15) + "%)",
+			"-webkit-transform" : "translate(-50%,-" + (60 - st/15) + "%)",
+		});  
+		$('#main__video').css({
+			"transform" : "translate(0%," + st/19 + "%)",
+			"-webkit-transform" : "translate(0%," + st/19 + "%)",
+		});   	
     });
 });
 ;(function($){
    $(document).on('click', 'a[href^=#]', function () {
         $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
-        console.log('ok');
         return false;
     });
 })(jQuery);
