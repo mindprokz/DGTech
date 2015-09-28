@@ -57,12 +57,12 @@ $(document).ready(function() {
     $(window).scroll(function(){
 		 var st = $(this).scrollTop();
 		$('#top__content').css({
-			"transform" : "translate(0%," + (60 - st/15) + "%)",
-			"-webkit-transform" : "translate(-50%,-" + (60 - st/15) + "%)",
+			"transform" : "translate(0%," + (60 - st/12) + "%)",
+			"-webkit-transform" : "translate(-50%,-" + (60 - st/12) + "%)",
 		});  
 		$('#main__video').css({
-			"transform" : "translate(0%," + st/19 + "%)",
-			"-webkit-transform" : "translate(0%," + st/19 + "%)",
+			"transform" : "translate(0%," + st/8 + "%)",
+			"-webkit-transform" : "translate(0%," + st/8 + "%)",
 		});   	
     });
 });
