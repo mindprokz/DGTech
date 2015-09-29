@@ -57,7 +57,7 @@ $(document).ready(function() {
     $(window).scroll(function(){
 		 var st = $(this).scrollTop();
 		$('#top__content').css({
-			"transform" : "translate(-50%," + (60 - st/12) + "%)",
+			"transform" : "translate(-50%,-" + (60 - st/12) + "%)",
 			"-webkit-transform" : "translate(-50%,-" + (60 - st/12) + "%)",
 		});  
 		$('#main__video').css({
