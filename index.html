@@ -247,7 +247,7 @@
 					</select>
 				</header>
 				<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="530px" height="300px" xml:space="preserve">
-					<g id="akmola" class="map_element active_elem">
+					<g id="akmola" class="map_element">
 						<polygon   stroke-miterlimit="10" points="278.7,96.4 278.7,93.9 283.2,93.9 285.8,91.7 290.8,91.7 292,92.9 289.3,96.4 287.3,99.6 288,103.2 294.8,105.9 298.5,101.7 300.5,103.6 302.6,103.2 304.3,101.4 307.7,103.7 309,105.9 310.7,105.1 314.2,103.2 315.2,101.7 314,97.7 318,95.9 320,92.9 323.5,89.2 327.2,90.9 328.3,95.4 331.2,96.1 333.2,93.9 333.2,91.9 335.3,91.6 337.3,88.1 341.3,85.7 345,85.7 349,83.6 349,79.2 345.8,79.2 343.2,79.2 344.8,76.2 349.8,76.2 351.7,72.4 349.5,69.2 352.8,64.9 352,61.7 351.3,55.9 350.3,51.9 345.8,51.6 342.2,49.6 335.8,52.1 333.2,46.4 329.7,46.7 327.8,49.6 321.8,49.6 320.7,48.1 320.7,43.2 316.8,39.4 314.5,41.9 309.3,38.6 305.8,41.4 301.2,39.6 303.3,36.9 301.8,34.4 297.6,35.2 296,38.6 293,36.2 288.8,38.1 288.3,40.7 291.2,44.6 287.8,47.1 287.8,53.2 284.5,53.2 281.5,57.9 278.5,57.9 279.5,60.1 277,62.5 274.3,62.5 271.7,60.1 269.5,61.6 270.5,64.9 269.3,64.1 265.2,64.1 263.5,60.1 261,62.1 254.9,62.1 253.6,65.5 253,67.1 251.2,69.9 248.2,71.4 244.8,72.2 244.5,74.7 246.7,74.7 248,77.4 246,80.7 248,85.6 247.8,90.9 249.3,91.2 251.7,88.2 253.8,89.9 256.7,92.6 259.2,92.6 260.5,94.6 264.8,92.6 268,93.6 268.5,95.4 267.5,97.2 268.2,99.7 270,100.7 273.7,97.6 	"/>
 					</g>
 					<g id="almaty" class="map_element">
@@ -293,12 +293,17 @@
 			</div>
 			<div id="contact_body">
 				<h2>Контакты</h2>
-				<h3 class="bold">Попков Геннадий Николаевич</h3>
-				<h4>директор департамента продаж</h4>
-				<h4 class="bold">Адрес: г.Астана ул. Б.Момыш Улы 8/1 офис 6</h4>
-				<h3 id="change_name" class="bold">Бурик Виталий Николаевич</h3>
-				<h4 id="change_status">региональный директор по Акмолинской области</h4>
-				<h4 id="change_adress" class="bold">Кокшетау Восточная промзона, проезд 17, 2/2</h4>
+				<div id="main__direction">
+					<h3 class="bold">Попков Геннадий Николаевич</h3>
+					<h4>директор департамента продаж</h4>
+					<h4 class="bold">Адрес: г.Астана ул. Б.Момыш Улы 8/1 офис 6</h4>
+				</div>
+				<div id="second__direction" style="display:none;">
+					<h3 id="change_name" class="bold">Бурик Виталий Николаевич</h3>
+					<h4 id="change_status">региональный директор по Акмолинской области</h4>
+					<h4 id="change_adress" class="bold">Кокшетау Восточная промзона, проезд 17, 2/2</h4>
+				</div>
+				<div id="map_canvas" style="height:300px;width:100%;margin-top:20px;"></div>
 			</div>
 		</div>
 	</div>
@@ -351,6 +356,7 @@
 	document.getElementsByTagName("head")[0].appendChild(ms);
 </script>
 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <!-- Load Scripts -->
 <script>var scr = {"scripts":[
 	{"src" : "libs/modernizr/modernizr.js", "async" : false},
@@ -358,9 +364,8 @@
 	{"src" : "libs/animate/animate-css.js", "async" : false},
 	{"src" : "libs/Wow/wow.min.js", "async" : false},
 	{"src" : "libs/fancybox/source/jquery.fancybox.pack.js", "async" : false},
-	{"src" : "min/js/common.js", "async" : false}
+	{"src" : "min/js/common.js", "async" : false},
 	]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 </script>
-
 </body>
 </html>
