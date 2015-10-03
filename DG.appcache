@@ -1,0 +1,20 @@
+CACHE MANIFEST
+# все картинки(CACHE)
+img/logo.png
+img/video-bg.jpg
+img/secr.png
+img/vigodi-bg.jpg
+img/work_bg.jpg
+img/qua_1.png
+img/qua_2.png
+img/qua_3.png
+img/qua_4.png
+img/qua_5.png
+img/vigodi_1.png
+img/vigodi_2.png
+img/vigodi_3.png
+img/vigodi_4.png
+img/vigodi_5.png
+
+NETWORK:
+*

@@ -78,7 +78,7 @@ body{
 }
 #header{
     position: relative;
-    overflow-y:hidden;
+    overflow:hidden;
 }
 #main__video{
     width: 100%;
