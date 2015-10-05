@@ -33,8 +33,10 @@
 
 <body>
 	<!-- Здесь пишем код -->
+	<a name="top"></a>
 	<div id="header">
 		<img src="img/video-bg.jpg" alt="background" id="main__video">
+		<video src="video/video_bg.mp4" preload="auto" loop autoplay id="main_bg_video"></video>
 		<div id="top__content">
 			<img src="img/logo.png" class=" hid wow bounceInDown" alt="logotype">
 			<h3 class="bold main_header_1  hid wow slideInLeft">Прямые поставки пестицидов</h3>
@@ -91,6 +93,7 @@
 			<img src="img/secr.png" alt="secr">
 		</div>
 	</div>
+	<a name="profit"></a>
 	<div id="profit" data-type="background" data-speed="3">
 		<div class="content">
 			<h3 class="light hid wow bounceIn"><span class="bold">Выгоды </span>сотрудничества </h3>
@@ -105,6 +108,7 @@
 			</div>
 		</div>
 	</div>
+	<a name="product"></a>
 	<div id="work">
 		<div class="content clear">
 			<h3 class="light"><span class="bold">Наша </span>продукция</h3>
@@ -189,6 +193,7 @@
 			</div>
 		</div>
 	</div>
+	<a name="comments"></a>
 	<div id="comment" data-type="background" data-speed="3">
 		<div class="content">
 			<h3 class="light hid wow bounceIn"><span class="bold">Отзывы</span> наших клиентов</h3>
@@ -227,6 +232,7 @@
 			<h3><span class="bold">Остались вопросы?</span> <a href="#anchor1">Наши специалисты ответят на них</a></h3>
 		</div>
 	</div>
+	<a name="contacts"></a>
 	<div id="map">
 		<div class="content clear">
 			<div id="maps_body">
@@ -313,6 +319,45 @@
 			<a href="mindpro.kz"><img src="img/copy.png" alt=""></a>
 		</div>
 	</footer>
+
+
+<div id="main_menu" class="menu_is_closed">
+	<div class="content">
+		<div class="main_menu__center">
+			<a href="#top" class="main_meni__link">Главная</a>
+			<a href="#profit" class="main_meni__link">Выгоды</a>
+			<a href="#product" class="main_meni__link">Продукция</a>
+			<a href="#comments" class="main_meni__link">Отзывы</a>
+			<a href="#contacts" class="main_meni__link">Контакты</a>	
+		</div>
+	</div>
+</div>
+<div id="hamburger" class="hamburglar is-closed hambur_yes_bg">
+	<div class="burger-icon">
+		<div class="burger-container">
+			<span class="burger-bun-top"></span>
+			<span class="burger-filling"></span>
+			<span class="burger-bun-bot"></span>
+		</div>
+	</div>
+	<!-- svg ring containter -->
+	<div class="burger-ring">
+		<svg class="svg-ring">
+			<path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+		</svg>
+	</div>
+	<!-- the masked path that animates the fill to the ring -->
+	<svg width="0" height="0">
+		<mask id="mask">
+		<path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+		</mask>
+	</svg>
+	<div class="path-burger">
+		<div class="animate-path">
+			<div class="path-rotation"></div>
+		</div>
+	</div>
+</div>
 <!--     Пример формы обратной связи          -->
 <!-- 
 	<div class="main"> 

@@ -1,6 +1,41 @@
 
 $(document).ready(function() {
+	 var trigger = $('#hamburger'),
+        isClosed = false,
+        main_menu = $('#main_menu');
 
+    trigger.click(function () {
+      burgerTime();
+    });
+
+    function burgerTime() {
+      if (isClosed == true) {
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        trigger.removeClass('hambur_no_bg');
+        trigger.addClass('hambur_yes_bg');
+        main_menu.removeClass('menu_is_open');
+        main_menu.addClass('menu_is_closed');
+        isClosed = false;
+      } else {
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        trigger.removeClass('hambur_yes_bg');
+        trigger.addClass('hambur_no_bg');
+        main_menu.removeClass('menu_is_closed');
+        main_menu.addClass('menu_is_open');
+        isClosed = true;
+      }
+    };
+    $('.main_meni__link').on('click',function(){
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        trigger.removeClass('hambur_no_bg');
+        trigger.addClass('hambur_yes_bg');
+        main_menu.removeClass('menu_is_open');
+        main_menu.addClass('menu_is_closed');
+        isClosed = false;
+    });
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
