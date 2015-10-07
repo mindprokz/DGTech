@@ -36,6 +36,26 @@ $(document).ready(function() {
         main_menu.addClass('menu_is_closed');
         isClosed = false;
     });
+
+    // common js
+    $(".fancybox").click(function() {
+		$(".fancybox").fancybox({
+			maxWidth: 800,
+			maxHeight: 600,
+			fitToView: false,
+			width: '80%',
+			height: '80%',
+			autoSize: false,
+			closeClick: false,
+			openEffect: 'fade',
+			closeEffect: 'fade',
+			helpers: {
+				title: {
+					type: 'inside'
+				}
+			}
+		});
+	});
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
@@ -129,6 +149,7 @@ maps_obj.change_name_arr = [
 	'Бурик Виталий Николаевич',
 	'Бурик Виталий Николаевич',
 	'name',
+	'Бурик Виталий Николаевич',
 ];
 maps_obj.change_status_arr = [
 	'региональный директор по Акмолинской области',
@@ -142,6 +163,7 @@ maps_obj.change_status_arr = [
 	'региональный директор по Акмолинской области',
 	'региональный директор по Акмолинской области',
 	'status',
+	'региональный директор по Акмолинской области',
 ];
 
 maps_obj.change_adress_arr = [
@@ -155,7 +177,8 @@ maps_obj.change_adress_arr = [
 	'Кокшетау Восточная промзона, проезд 17, 2/2',
 	'Кокшетау Восточная промзона, проезд 17, 2/2',
 	'Кокшетау Восточная промзона, проезд 17, 2/2',
-	'adress'
+	'adress',
+	'Кокшетау Восточная промзона, проезд 17, 2/2',
 ];
 maps_obj.maps_coord = [
 	new google.maps.LatLng(53.270541,69.441158),
@@ -291,6 +314,10 @@ maps_obj.selector.onchange = function(){
 		case 'Восточно-Казахстанская':
 			maps_obj.changePositionOnMaps(10);
 			changeInitMap(10);
+		break;
+		case 'Павлодарская':
+			maps_obj.changePositionOnMaps(11);
+			changeInitMap(11);
 		break;
 	}
 };
