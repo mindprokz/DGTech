@@ -943,6 +943,14 @@ background: url(../../img/upfeathers.jpg);
     font-size: 12pt;
     font-weight: 300;
 }
+.status_comment_man{
+  color: #005cb2;
+  font-size: 14pt;  
+}
+.status_comment_man2{
+  color: #ffde00;
+  font-size: 14pt;  
+}
 .bottom_comment{
     background: url(../../img/comment_yellow.png) no-repeat;
     margin-left: 145px;
@@ -976,7 +984,7 @@ background: url(../../img/upfeathers.jpg);
     background: url(../../img/comment_blue.png) no-repeat top right;
     margin-right: 145px;
     text-align: right;
-    padding-right: 60px;
+    padding-right: 30px;
     color: #ffde00;
     padding-bottom: 15px;
     font-size: 14pt;

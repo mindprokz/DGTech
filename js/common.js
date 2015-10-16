@@ -148,7 +148,7 @@ maps_obj.change_name_arr = [
 	'Бурик Виталий Николаевич',
 	'Бурик Виталий Николаевич',
 	'Бурик Виталий Николаевич',
-	'name',
+	'Байбухинов Каусат Самангазинович',
 	'Бурик Виталий Николаевич',
 ];
 maps_obj.change_status_arr = [
@@ -162,7 +162,7 @@ maps_obj.change_status_arr = [
 	'региональный директор по Акмолинской области',
 	'региональный директор по Акмолинской области',
 	'региональный директор по Акмолинской области',
-	'status',
+	'региональный директор по Восточно-Казахстанской области',
 	'региональный директор по Акмолинской области',
 ];
 
@@ -177,7 +177,7 @@ maps_obj.change_adress_arr = [
 	'Кокшетау Восточная промзона, проезд 17, 2/2',
 	'Кокшетау Восточная промзона, проезд 17, 2/2',
 	'Кокшетау Восточная промзона, проезд 17, 2/2',
-	'adress',
+	'Усть-Каменогорск, левый берег, ул. Базовая,1',
 	'Кокшетау Восточная промзона, проезд 17, 2/2',
 ];
 maps_obj.maps_coord = [
@@ -185,16 +185,18 @@ maps_obj.maps_coord = [
 	new google.maps.LatLng(53.270541,69.441158),
 	new google.maps.LatLng(53.270541,69.441158),
 	// 
-	new google.maps.LatLng(54.870741,69.130146),
+	new google.maps.LatLng(54.867135,69.122864),
 	// 
-	new google.maps.LatLng(53.22394,63.613403),
-	new google.maps.LatLng(53.22394,63.613403),
-	new google.maps.LatLng(53.22394,63.613403),
+	new google.maps.LatLng(53.195503,63.733208),
+	new google.maps.LatLng(53.195503,63.733208),
+	new google.maps.LatLng(53.195503,63.733208),
 	// 
 	new google.maps.LatLng(53.270541,69.441158),
 	new google.maps.LatLng(53.270541,69.441158),
 	new google.maps.LatLng(53.270541,69.441158),
 	// 
+	new google.maps.LatLng(49.936834,82.649166),
+	//
 	new google.maps.LatLng(53.270541,69.441158),
 ];
 // гугл мапс
@@ -216,7 +218,7 @@ function initialize() {
 		} ];
 	// Опции карты
 	var mapOptions = {
-			zoom: 17,
+			zoom: 15,
 			center: oz,
 			disableDefaultUI: true,
 			mapTypeControlOptions: {
@@ -252,6 +254,12 @@ function initialize() {
 	});
 	var marker1 = new google.maps.Marker({
 			position: maps_obj.maps_coord[4],
+			map: map,
+			title: 'Филиал в Астане',
+			icon : 'img/maps_arrow.png',
+	});
+	var marker1 = new google.maps.Marker({
+			position: maps_obj.maps_coord[10],
 			map: map,
 			title: 'Филиал в Астане',
 			icon : 'img/maps_arrow.png',
