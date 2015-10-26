@@ -872,6 +872,28 @@ img[alt="profit"]{
     background: #005cb2;
     color: #ffde00;
 }
+#named_block{
+  background: url(../../img/dop_bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+.named_block__content_left{
+  width: 440px;
+  text-align: left;
+  padding-top: 50px;
+  float: left;
+  font-size: 15pt;
+}
+.named_block__content_right{
+  padding-top: 50px;
+  text-align: right;
+  font-size: 15pt;
+  width: 340px;
+  float: right;
+}
+.named_block__content_right a{
+  border-bottom: 1px dotted #005cb2;
+}
 #right_half{
     width: 45%;
     float: left;
@@ -1046,13 +1068,13 @@ option:hover{
     fill: #3284de;
 }
 #contact_body{
-    height: 466px;
+    height: 525px;
     background: #005cb2;
     float: right;
     width: 40%;
     color: #fff;
     text-align: left;
-    padding-top: 50px;
+    padding-top: 25px;
     overflow-y:hidden;
 }
 #contact_body h2, #main__direction, #second__direction{
