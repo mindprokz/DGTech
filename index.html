@@ -27,10 +27,11 @@
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="js/controller.js"></script>
 </head>
 
-<body>
+<body ng-app="Dg_App" ng-controller="main_ctrl">
 	<!-- Здесь пишем код -->
 	<a name="top"></a>
 	<div id="header">
@@ -68,11 +69,7 @@
 	<a name="goQuality"></a>
 	<div id="quality">
 		<div class="content">
-			<img src="img/qua_5.png" alt="quality" class="hid wow zoomIn">
-			<img src="img/qua_4.png" alt="quality" class="hid wow zoomIn"data-wow-delay="0.25s">
-			<img src="img/qua_3.png" alt="quality" class="hid wow zoomIn"data-wow-delay="0.5s">
-			<img src="img/qua_2.png" alt="quality" class="hid wow zoomIn"data-wow-delay="0.25s">
-			<img src="img/qua_1.png" alt="quality" class="hid wow zoomIn">
+			<img ng-repeat="x in icons" ng-src="{{x.src}}" class="hid wow zoomIn" alt="" data-wow-delay="{{x.data_delay}}">
 		</div>
 	</div>
 	<div id="form_y">
@@ -98,13 +95,13 @@
 		<div class="content">
 			<h3 class="light hid wow bounceIn"><span class="bold">Выгоды </span>сотрудничества </h3>
 			<div id="first_profit_block">
-				<img src="img/vigodi_1.png"  class="hid wow fadeInLeft" data-wow-delay="0.25s" alt="profit">
-				<img src="img/vigodi_2.png"  class="hid wow fadeIn" data-wow-delay="0.25s" alt="profit">
-				<img src="img/vigodi_3.png" class="hid wow fadeInRight" data-wow-delay="0.25s"  alt="profit">
+				<img ng-src="{{profit[0].src}}"  class="{{'hid wow ' + profit[0].animation}}" data-wow-delay={{profit[0].data_delay}}" alt="profit">
+				<img ng-src="{{profit[1].src}}"  class="{{'hid wow ' + profit[1].animation}}" data-wow-delay="0.25s" alt="profit">
+				<img ng-src="{{profit[2].src}}" class="{{'hid wow ' + profit[2].animation}}" data-wow-delay="0.25s"  alt="profit">
 			</div>
 			<div id="second_profit_block">
-				<img src="img/vigodi_4.png" class="hid wow fadeInLeft" data-wow-delay="0.5s" alt="profit">
-				<img src="img/vigodi_5.png"  class="hid wow fadeInRight" data-wow-delay="0.5s"  alt="profit">
+				<img ng-src="{{profit[3].src}}" class="{{'hid wow ' + profit[3].animation}}" data-wow-delay="0.5s" alt="profit">
+				<img ng-src="{{profit[4].src}}"  class="{{'hid wow ' + profit[4].animation}}" data-wow-delay="0.5s"  alt="profit">
 			</div>
 		</div>
 	</div>
@@ -118,33 +115,9 @@
 					<div id="left_half">
 						<header class="bold">Мы предлагаем следующие виды продукции:</header>
 						<table>
-							<tr>
-								<td>- Протравители семян </td>
-								<td>- Прилипатель</td>
-							</tr>
-							<tr>
-								<td>- Гербициды сплошного действия</td>
-								<td>- Баковые смеси </td>
-							</tr>
-							<tr>
-								<td>- Гербициды против двудольных </td>
-								<td>- Услуги по внесению, обработка складских помещений</td>
-							</tr>
-							<tr>
-								<td>- Противозлаковые гербициды</td>
-								<td>- Опрыскиватели </td>
-							</tr>
-							<tr>
-								<td>- Инсектицид  </td>
-								<td>- Агро-Навигаторы </td>
-							</tr>
-							<tr>
-								<td>- Фунгицид </td>
-								<td>- Агрохимическое и другое измерительное оборудование </td>
-							</tr>
-							<tr>
-								<td>- Фумигант </td>
-								<td></td>
+							<tr ng-repeat="x in table_names">
+								<td>{{x.first_collumn}}</td>
+								<td>{{x.second_collumn}}</td>
 							</tr>
 						</table>
 						<form id="application2" action=" mail2.php" method="POST" name=" application ">
@@ -205,33 +178,12 @@
 	<div id="comment" data-type="background" data-speed="3">
 		<div class="content">
 			<h3 class="light hid wow bounceIn"><span class="bold">Отзывы</span> наших клиентов</h3>
-			<div class="comment hid wow fadeInLeft">
-				<div class="yellow clear">
-					<img src="img/comment/comment_1.png" alt="comment">
-					<p><span class="status_comment_man">АОЗТ им. Алтынсарина, Костанайская область</span> <br> Наше хозяйство одно из крупнейших в регионе, посевные площади около 100 000 га. Естественно, что рисковать и экспериментировать мы не можем, слишком большая ответственность перед людьми. Поэтому мы используем только проверенные препараты от «DG Technology». Дело не только в цене и высоком качестве. Важен ответственный подход и гарантии поставки, ведь в нашем деле мелочей не бывает. Одна задержка поставок может поставить под угрозу весь урожай. За 10 лет сотрудничества мы выработали отработанную схему взаимодействия и сейчас полностью довольны нашими деловыми отношениями.  </p>
+			<div ng-repeat="x in comments" class="{{'comment hid wow ' + x.animation}}">
+				<div class="{{x.color_scheme + ' clear'}}">
+					<img ng-src="{{x.avatar_src}}" alt="comment">
+					<p><span class="{{x.text_style}}">{{x.text_header}}</span> <br> {{x.text_content}}</p>
 				</div>
-				<div class="bottom_comment">Князев Борис Павлович</div>
-			</div>
-			<div class="comment hid wow fadeInRight">
-				<div class="blue clear">
-					<img src="img/comment/comment_2.png" alt="comment">
-					<p><span class="status_comment_man2">ТОО «Московское», Северо-Казахстанская область </span> <br>Я рад, что мы работаем с этой компанией уже 7 лет. Они всегда могут войти в наше положение и предложить лучшее решение. Если надо отсрочку по платежам, без проблем дают, мне это очень важно. Сейчас, когда с финансами ситуация не самая стабильная, возможность отсрочки и лучшая цена рынке очень помогают нам. Я знаю, что всегда смогу закупить пестициды на самых выгодных условиях. Немаловажно еще и обучение наших сотрудников и консультации по препаратам. </p>
-				</div>
-				<div class="bottom_comment2">Коняхин Николай Петрович</div>
-			</div>
-			<div class="comment hid wow fadeInLeft">
-				<div class="yellow clear">
-					<img src="img/comment/comment_3.png" alt="comment">
-					<p><span class="status_comment_man">ТОО "Енбек", Акмолинская область</span> <br>Наше хозяйство является системообразующим для округа. Наша земля испокон веков кормила своих жителей. Но без тяжкого труда и ежедневной заботы хороший результат получить тяжело. Прогресс не стоит месте и без инноваций сейчас никуда. Благодаря сотрудничеству с «DG Technology», мы всегда в курсе последних новинок на рынке пестицидов. Объемы закупок у нас немаленькие, соответственно, и требования к поставщику жесткие. К чести компании, не подводили ни разу. Всегда можем сесть и обсудить - и ценовую политику и, если надо, об отсрочке договориться.</p>
-				</div>
-				<div class="bottom_comment" data-per="1">Ракишев Куаныш Баранкулович</div>
-			</div>
-			<div class="comment hid wow fadeInRight">
-				<div class="blue clear">
-					<img src="img/comment/comment_4.png" alt="comment">
-					<p><span class="status_comment_man2">ТОО «Симаргл», Северо-Казахстанская область </span> <br> С компанией «DG Technology» я работаю уже 8 лет. Регулярно использую их препараты. Нареканий нет никаких. Всё, что заявляется производителем, потом доказывается на деле. Сельское хозяйство – дело непростое и не быстрое. Чтобы получить хороший урожай, нужно долго и кропотливо работать. Поэтому важно иметь надежного поставщика, который оперативно и в полном объёме сможет снабжать необходимыми пестицидами. А главное, понимать все тонкости нашего дела. Со специалистами «DG Technology» у нас сложились, можно сказать, дружеские отношения, которые идут только на пользу нашему сотрудничеству. </p>
-				</div>
-				<div class="bottom_comment2">Пожиткин Владимир Федорович</div>
+				<div class="{{x.name_style}}">{{x.name}}</div>
 			</div>
 		</div>
 	</div>
@@ -407,6 +359,6 @@
 	{"src" : "min/js/common.js", "async" : false},
 	]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 </script>
-<script async="" type="text/javascript" src="//api.pozvonim.com/widget/callback/v3/2f10deedddd25e981a521f52d383ede4/connect" id="check-code-pozvonim" charset="UTF-8"></script>
+<!--<script async="" type="text/javascript" src="//api.pozvonim.com/widget/callback/v3/2f10deedddd25e981a521f52d383ede4/connect" id="check-code-pozvonim" charset="UTF-8"></script>-->
 </body>
 </html>
